@@ -154,14 +154,6 @@
       height: 160px;
       width: auto;
       display: block;
-      animation: llamaFloat 4.5s ease-in-out infinite;
-    }
-    @keyframes llamaFloat {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-14px); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .hero-llama img { animation: none; }
     }
 
     .hero-eyebrow {
@@ -524,6 +516,8 @@
     }
 
     .pricing-card {
+      display: flex;
+      flex-direction: column;
       position: relative;
       background: var(--white);
       border: 2px solid var(--line);
@@ -1161,6 +1155,7 @@
       .legal-table { margin: 0; }
       .legal-table td + td { margin-top: 0.75rem; }
     }
+    .pricing-card .plan-cta { margin-top: auto; }
   </style>
 </head>
 <body>
@@ -1449,7 +1444,6 @@
             <span class="pricing-period">/ year</span>
           </div>
           <p class="pricing-alt">About $4.17 a month <span class="pricing-save">save 40%</span></p>
-          <p class="pricing-desc">Everything in Monthly, for a lot less.</p>
           <ul class="pricing-features">
             <li><span class="check">&#10003;</span> Unlimited uses</li>
             <li><span class="check">&#10003;</span> Everything in Free</li>
