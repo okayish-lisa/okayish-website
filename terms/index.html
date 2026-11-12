@@ -1,14 +1,1286 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terms of Service · Okay*ish</title>
-<link rel="canonical" href="https://okayish.app/#terms">
-<meta http-equiv="refresh" content="0; url=/#terms">
-<script>location.replace('/#terms');</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms & Conditions · Okay*ish</title>
+  <meta name="description" content="The Okay*ish Terms &amp; Conditions, with legal and plain-language versions side by side." />
+  <link rel="canonical" href="https://okayish.app/terms/" />
+  <link rel="icon" type="image/png" href="/images/llama-icon.png" />
+  <link rel="apple-touch-icon" href="/images/llama-icon.png" />
+  <meta name="apple-itunes-app" content="app-id=6831597818" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Okay*ish" />
+  <meta property="og:title" content="Terms &amp; Conditions · Okay*ish" />
+  <meta property="og:description" content="The Okay*ish Terms &amp; Conditions, with legal and plain-language versions side by side." />
+  <meta property="og:url" content="https://okayish.app/terms/" />
+  <meta property="og:image" content="https://okayish.app/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Okay*ish llama, meditating, next to the words: An app for the moments that get to you." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <style>
+    :root {
+      --sky: #5b8bff;
+      --sky-mid: #3f73e3;
+      --sky-pale: #dcf9ff;
+      --sky-faint: #ecfcff;
+      --navy: #1a1d2b;
+      --navy-mid: #5a6178;
+      --white: #ffffff;
+      --line: #dde2ef;
+      --ink: #1a1d2b;
+      --ink-dim: #5a6178;
+      --ink-faint: #8990a6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      z-index: 100;
+      padding: 0 2rem;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .wordmark {
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      color: var(--ink);
+    }
+
+    .wordmark .ast {
+      color: var(--sky-mid);
+      font-weight: 800;
+      margin: 0 1px;
+    }
+
+    .wordmark .ish {
+      font-style: italic;
+      font-weight: 600;
+      color: var(--ink-dim);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--ink-dim);
+      text-decoration: none;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--navy);
+    }
+
+    .nav-cta {
+      background: var(--sky-mid);
+      color: var(--white) !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
+      font-weight: 600;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--sky) !important;
+      color: var(--white) !important;
+    }
+
+    /* PAGES */
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .container-narrow {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(180deg, #5fe5fe 0%, #cff7ff 100%);
+      padding: 5rem 2rem 5rem;
+      text-align: center;
+    }
+
+    .hero-llama {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-llama img {
+      height: 160px;
+      width: auto;
+      display: block;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 1.2rem;
+      opacity: 0.7;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 1.2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero h1 .brand {
+      color: var(--navy);
+    }
+
+    .rotator-stage {
+      font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+      height: 1.9em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .rotator-stage { height: 3em; }
+      .rotator-line { white-space: normal !important; }
+    }
+    .rotator-line {
+      font-size: 1em;
+      line-height: 1.4;
+      text-align: center;
+      font-weight: 600;
+      color: var(--navy-mid);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+      white-space: nowrap;
+    }
+
+    .rotator-line.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rotator-line {
+        transition: none;
+      }
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--navy-mid);
+      margin-bottom: 2.5rem;
+      line-height: 1.65;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: #3f73e3;
+      color: var(--white);
+      padding: 0.85rem 2rem;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      border: none;
+      box-shadow: 0 4px 16px rgba(63, 115, 227, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: #5b8bff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(63, 115, 227, 0.3);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: rgba(255,255,255,0.6);
+      color: var(--navy);
+      padding: 0.85rem 2rem;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid rgba(26, 29, 43, 0.3);
+      transition: all 0.2s;
+      backdrop-filter: blur(4px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.85);
+      border-color: var(--navy);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--sky-faint);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 1.5rem 2rem;
+    }
+
+    .trust-items {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--navy-mid);
+      font-weight: 500;
+    }
+
+    .trust-icon {
+      width: 18px;
+      height: 18px;
+      background: var(--sky-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-size: 0.7rem;
+    }
+
+    /* SECTIONS */
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sky-mid);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+      color: var(--navy);
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--ink-dim);
+      max-width: 560px;
+      margin-bottom: 3rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .step {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      border: none;
+      box-shadow: 0 4px 24px rgba(26, 29, 43, 0.08);
+    }
+
+    .step-num {
+      width: 36px;
+      height: 36px;
+      background: var(--sky);
+      color: var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .step h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--navy);
+    }
+
+    .step p {
+      font-size: 0.95rem;
+      color: var(--ink-dim);
+      line-height: 1.6;
+    }
+
+    /* FEATURES */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border: none;
+      border-radius: 20px;
+      padding: 1.75rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(26, 29, 43, 0.07);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(26, 29, 43, 0.12);
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--sky-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+
+    .feature-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--navy);
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+      line-height: 1.6;
+    }
+
+    /* PRIVACY */
+    .privacy-section {
+      background: #1f3a5f;
+      color: var(--white);
+      text-align: center;
+      max-width: 980px;
+      margin: 0 auto;
+      border-radius: 28px;
+      padding: 4.5rem 2.5rem;
+      box-shadow: 0 20px 50px rgba(13, 30, 54, 0.22);
+    }
+
+    .privacy-section .section-label {
+      color: var(--sky);
+      opacity: 0.9;
+    }
+
+    .privacy-section .section-title {
+      color: var(--white);
+    }
+
+    .privacy-section p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .privacy-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 240px));
+      justify-content: center;
+      gap: 2.25rem 3rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 480px) {
+      .privacy-points { grid-template-columns: minmax(0, 260px); }
+    }
+
+    .privacy-point {
+      text-align: center;
+    }
+
+    .privacy-point .icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sky);
+    }
+
+    .privacy-point h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--sky);
+    }
+
+    .privacy-point p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+      margin: 0;
+    }
+
+    .privacy-section .btn-secondary {
+      color: var(--white);
+      border-color: rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .privacy-section .btn-secondary:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* PRICING */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pricing-card {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background: var(--white);
+      border: 2px solid var(--line);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(26, 29, 43, 0.07);
+    }
+
+    .pricing-card.pricing-featured {
+      border-color: var(--sky-mid);
+      box-shadow: 0 8px 32px rgba(63, 115, 227, 0.2);
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--sky-mid);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 100px;
+      box-shadow: 0 4px 12px rgba(63, 115, 227, 0.3);
+    }
+
+    .pricing-tier {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sky-mid);
+      margin-bottom: 0.75rem;
+    }
+
+    .pricing-amount {
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.2rem;
+    }
+
+    .pricing-num {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .pricing-period {
+      font-size: 1rem;
+      color: var(--ink-dim);
+    }
+
+    .pricing-alt {
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+      margin-bottom: 1rem;
+    }
+
+    .pricing-save {
+      background: var(--sky-pale);
+      color: var(--navy);
+      padding: 0.1rem 0.5rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .pricing-desc {
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      padding: 0.3rem 0;
+      color: var(--ink);
+    }
+
+    .pricing-features li .check {
+      color: var(--sky-mid);
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(180deg, var(--sky-faint) 0%, var(--sky-pale) 100%);
+      text-align: center;
+    }
+
+    .cta-section .section-title {
+      color: var(--navy);
+    }
+
+    /* THERAPIST PAGE */
+    .therapist-hero {
+      background: linear-gradient(180deg, var(--sky-pale) 0%, var(--sky-faint) 100%);
+      padding: 6rem 2rem 5rem;
+      text-align: center;
+    }
+
+    .therapist-hero h1,
+    .therapist-hero p {
+      color: var(--navy);
+    }
+
+    .pill {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--sky);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 100px;
+      margin-bottom: 1.2rem;
+    }
+
+    .research-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .research-card {
+      background: var(--white);
+      border: none;
+      border-radius: 20px;
+      padding: 1.75rem;
+      text-align: left;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(26, 29, 43, 0.07);
+    }
+
+    .research-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(26, 29, 43, 0.12);
+    }
+
+    .research-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--sky-mid);
+      margin-bottom: 0.75rem;
+    }
+
+    .research-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      line-height: 1.4;
+    }
+
+    .research-card p {
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .research-card a {
+      font-size: 0.875rem;
+      color: var(--navy-mid);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .research-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* HOW IT FITS */
+    .fit-list {
+      list-style: none;
+      margin-top: 2rem;
+    }
+
+    .fit-list li {
+      display: flex;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .fit-list li:last-child {
+      border-bottom: none;
+    }
+
+    .fit-check {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      background: var(--sky);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-size: 0.75rem;
+      margin-top: 2px;
+    }
+
+    .fit-list h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .fit-list p {
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+    }
+
+    /* THERAPIST CTA */
+    .therapist-cta {
+      background: var(--navy);
+      padding: 5rem 2rem;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .therapist-cta h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .therapist-cta p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .btn-white {
+      display: inline-block;
+      background: var(--white);
+      color: var(--navy);
+      padding: 0.85rem 2rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      border: none;
+    }
+
+    .btn-white:hover {
+      opacity: 0.9;
+    }
+
+    /* COMPANY PAGE */
+    .plans-hero {
+      background: linear-gradient(135deg, #1a1d2b 0%, #3f73e3 100%);
+      padding: 6rem 2rem 5rem;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .plans-hero .pill {
+      background: rgba(255,255,255,0.15);
+      color: var(--white);
+    }
+
+    .plans-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .plans-hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 540px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+      margin-top: 3.5rem;
+      padding-top: 3.5rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 0.4rem;
+    }
+
+    /* VALUE PROPS */
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .value-card {
+      background: var(--white);
+      border: none;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(26, 29, 43, 0.07);
+    }
+
+    .value-card .icon {
+      width: 44px;
+      height: 44px;
+      background: var(--sky-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+
+    .value-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .value-card p {
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+      line-height: 1.6;
+    }
+
+    /* CONTACT CTA */
+    .contact-cta {
+      background: var(--sky-faint);
+      text-align: center;
+    }
+
+    .contact-form {
+      background: var(--white);
+      border: none;
+      border-radius: 24px;
+      box-shadow: 0 8px 40px rgba(26, 29, 43, 0.1);
+      padding: 2.5rem;
+      max-width: 540px;
+      margin: 2.5rem auto 0;
+      text-align: left;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--ink);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--ink);
+      background: var(--white);
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--sky-mid);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 0.85rem;
+      background: #3f73e3;
+      color: var(--white);
+      border: none;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .form-submit:hover {
+      background: #5b8bff;
+    }
+
+    /* CONFIDANTE SECTION */
+    .confidante-scenarios {
+      max-width: 580px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .confidante-scenarios p {
+      font-size: 1.15rem;
+      color: var(--ink-dim);
+      font-style: italic;
+      line-height: 1.75;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .confidante-scenarios p:last-child {
+      border-bottom: none;
+    }
+
+    .confidante-llama {
+      margin: 0 auto 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .confidante-llama img {
+      height: 110px;
+      width: auto;
+    }
+
+    .confidante-payoff {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .confidante-sub {
+      font-size: 1rem;
+      color: var(--ink-dim);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1f3a5f;
+      color: rgba(255,255,255,0.6);
+      padding: 3rem 2rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand-row .llama-bubble {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .footer-brand-row .llama-bubble img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      display: block;
+      opacity: 0.85;
+    }
+
+    .footer-brand {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .footer-brand .ast {
+      color: var(--sky);
+      font-weight: 800;
+    }
+
+    .footer-brand .ish {
+      font-style: italic;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .footer-tagline {
+      font-size: 0.875rem;
+      max-width: 220px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-col h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 1.5rem auto 0;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-links {
+        gap: 2rem;
+      }
+
+      .stats-row {
+        gap: 2rem;
+      }
+    }
+    .coming-soon { cursor: default !important; }
+    .coming-soon:hover { transform: none !important; }
+    .pricing-currency { font-size: 0.78rem; color: var(--ink-dim); margin: -0.25rem 0 0.75rem; }
+    .form-note { font-size: 0.82rem; color: var(--ink-dim); margin-top: 0.85rem; line-height: 1.5; }
+    .form-note a { color: var(--sky-mid); }
+    .privacy-honest { max-width: 620px; margin: 1.25rem auto 0; font-size: 0.92rem; line-height: 1.6; opacity: 0.85; }
+    .footer-age { font-size: 0.82rem; opacity: 0.7; margin-top: 0.6rem; max-width: 280px; line-height: 1.5; }
+    .legal-page { padding-top: 7rem; }
+    .legal-meta { color: var(--ink-dim); font-size: 0.9rem; line-height: 1.6; margin-top: 0.5rem; }
+    .legal-intro { color: var(--ink-dim); font-size: 0.95rem; font-style: italic; margin: 1rem 0 2rem; max-width: 640px; }
+    .legal-page h2 { font-size: 1.25rem; margin: 2.5rem 0 1rem; }
+    .legal-table { width: 100%; border-collapse: separate; border-spacing: 1rem 0; margin: 0 -1rem; table-layout: fixed; }
+    .legal-table td { vertical-align: top; padding: 1.25rem 1.4rem; border-radius: 14px; font-size: 0.92rem; line-height: 1.65; }
+    .legal-table td p { margin-bottom: 0.75rem; }
+    .legal-table td p:last-child { margin-bottom: 0; }
+    .legal-col { background: var(--white); border: 1px solid var(--line); }
+    .plain-col { background: var(--sky-pale); }
+    .col-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sky-mid); }
+    @media (max-width: 760px) {
+      .legal-table, .legal-table tbody, .legal-table tr, .legal-table td { display: block; width: 100%; }
+      .legal-table { margin: 0; }
+      .legal-table td + td { margin-top: 0.75rem; }
+    }
+    .pricing-card .plan-cta { margin-top: auto; }
+    .contact-page { padding-bottom: 5rem; }
+    .contact-lede { color: var(--ink-dim); font-size: 1.05rem; line-height: 1.65; max-width: 520px; margin: 1rem auto 2rem; }
+    .contact-card { background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 2rem 1.5rem; max-width: 440px; margin: 0 auto; box-shadow: 0 4px 24px rgba(26, 29, 43, 0.07); }
+    .contact-email { font-size: clamp(1.2rem, 4.5vw, 1.6rem); font-weight: 700; margin-bottom: 1.25rem; word-break: break-all; user-select: all; }
+    .contact-small { color: var(--ink-dim); font-size: 0.9rem; margin-top: 1.75rem; }
+    .hero-sub.hero-sub-1 { margin-bottom: 0.5rem; }
+    .hero-sub.hero-sub-2 { font-weight: 600; }
+    a.btn-primary, a.btn-white, a.nav-cta { display: inline-block; text-decoration: none; }
+    a.plan-cta { display: block; box-sizing: border-box; text-decoration: none; }
+      a.nav-logo { text-decoration: none; color: inherit; }
+  </style>
 </head>
-<body style="font-family:system-ui,sans-serif;padding:2rem;">
-<p>Taking you to the Okay*ish Terms of Service… If nothing happens, <a href="/#terms">open the Terms of Service</a>.</p>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Okay*ish home">
+      <span class="wordmark">Okay<span class="ast">*</span><span class="ish">ish</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="https://apps.apple.com/app/id6831597818" target="_blank" rel="noopener" class="nav-cta">Get the App</a>
+    </div>
+  </div>
+</nav>
+
+<div id="page-terms" class="page active">
+  <section class="legal-page">
+    <div class="container">
+      <p class="section-label">Okay*ish</p>
+      <h1 class="section-title">Terms &amp; Conditions</h1>
+      <p class="legal-meta">Effective Date: November 5, 2026 &middot; Last Updated: November 2026<br>Operated by Larian Group Inc., Ontario, Canada</p>
+      <p class="legal-intro">Each section has a legal version and a plain-language version. Both say the same thing. If they ever seem to differ, the legal version is the one that applies.</p>
+      <h2>1. Acceptance of Terms</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Agreement to Terms</strong></p><p>These Terms and Conditions ("Terms") form a legally binding agreement between you ("you" or "User") and Larian Group Inc., a corporation based in Ontario, Canada ("Larian," "we," "us," or "our"), which operates the Okay*ish mobile application and related services (the "App").</p><p>By downloading, installing, accessing, or using the App, you agree to be bound by these Terms and by our Privacy Policy. If you do not agree, you must not use the App.</p><p>We may modify these Terms from time to time. Material changes will be communicated through in-app notification or by email (if an account email is on file) at least thirty (30) days before they take effect. Your continued use of the App after the effective date of a modification constitutes acceptance of the revised Terms.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>The Basics</strong></p><p>By using Okay*ish, you're agreeing to these terms. Okay*ish is run by Larian Group Inc., a small company in Ontario, Canada. That's the "we" in this document.</p><p>If you don't agree, that's completely fine, but please don't use the app.</p><p>If we ever make a big change to these terms, we'll give you at least 30 days' notice before it kicks in. No surprises.</p><p>We know nobody reads terms for fun. That's why this plain-language version sits right next to the legal one, so you can actually understand what you're agreeing to.</p></td></tr></tbody></table><h2>2. Eligibility</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Age and Capacity Requirements</strong></p><p>You must be at least eighteen (18) years of age to use the App. The App is not intended for, and may not be used by, anyone under 18.</p><p>By using the App, you represent and warrant that you are at least 18 years old and legally capable of entering into a binding agreement.</p><p>We may terminate access where we reasonably believe these eligibility requirements are not met.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>Who Can Use Okay*ish</strong></p><p>You need to be 18 or older to use Okay*ish.</p><p>By using the app, you're telling us you are. If we find out otherwise, we may need to close the account.</p></td></tr></tbody></table><h2>3. Description of Service</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Service Overview</strong></p><p>The App uses artificial intelligence to generate comedic reframes of everyday situations you describe. For everyday moments, the App provides a "kit" consisting of a short reframe, a one-liner, and a song suggestion. For situations the App classifies as heavy, it provides a gentler response. For situations it classifies as a possible crisis, it provides crisis resources instead of a comedic response.</p><p>The App is intended for general wellbeing and lighthearted perspective only. It uses a third-party AI service provider to process your input and generate responses, and maintains preference totals to tailor its style to you over time, as described in our Privacy Policy.</p><p>Creating an account is optional. Some features, such as keeping your preferences when you change devices, may require an account.</p><p>We may add, change, or remove features at any time. We will provide reasonable notice of material changes to core functionality.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>What Okay*ish Does</strong></p><p>You tell Okay*ish what happened, in your own words. It gives you back a kit: a funny new way to look at the moment, a one-liner you can text a friend, and a song that fits.</p><p>If what you share is heavy, like grief or a loss, you get something gentler instead of jokes. If it sounds like you might be in danger, you get crisis support info instead.</p><p>The app uses AI to write your kit, and it learns what makes you laugh over time. (Our Privacy Policy explains how, and what we do and don't keep.)</p><p>You don't need an account to use it. An account just lets your preferences follow you to a new phone.</p><p>We'll keep adding and improving things. If anything major changes, we'll let you know.</p></td></tr></tbody></table><h2>4. Voice Settings and Strong Language</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Voice Settings</strong></p><p>The App lets you choose a voice setting (such as Friendly, Snarky, or Unfiltered). Some settings may produce sharper comedy, mature themes, and profanity. You choose these settings and are responsible for selecting a setting suitable for you.</p><p>Regardless of setting, the App is designed so that its comedy targets the situation and not you. Comedy about other people involved in your situation is generated for your private use only. You agree not to use the App or its output to harass, threaten, defame, or target any person.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>Choosing How It Talks to You</strong></p><p>You can pick how Okay*ish talks to you, from Friendly to Snarky to Unfiltered. The bolder settings can swear and get spicier.</p><p>Whatever you pick, the joke is never on you. If the app roasts the driver who cut you off, that's for you to enjoy privately, not to send to them or post about them.</p></td></tr></tbody></table><h2>5. Free Uses and Subscriptions</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Free and Paid Access</strong></p><p>(a) Free Uses: New users may use the App for a limited number of free uses, currently ten (10) in total. Free uses do not reset or renew. We may take reasonable measures to prevent the free-use limit from being circumvented, and may change the number of free uses for new users with reasonable notice.</p><p>(b) Paid Subscription: After your free uses are used, continued use of the App requires a paid subscription. Subscription options, prices, and billing periods are shown in the App before purchase.</p><p>(c) Billing and Automatic Renewal: Subscriptions are purchased and billed through the Apple App Store or Google Play (each an "App Store"). Payment is charged to your App Store account at confirmation of purchase. Subscriptions renew automatically at the end of each billing period at the then-current price unless cancelled at least twenty-four (24) hours before the end of the current period. You can manage or cancel your subscription in your App Store account settings. Deleting the App does not cancel a subscription.</p><p>(d) Refunds: Except as required by applicable law, fees are non-refundable. Refunds for App Store purchases are handled by the App Store under its own refund policy.</p><p>(e) Price Changes: We may change subscription prices. Price changes are communicated and applied in accordance with App Store rules, and you will have the opportunity to cancel before a price increase applies to you.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>Free vs. Paid</strong></p><p>Everyone gets 10 free uses to try Okay*ish. No credit card needed. Those 10 don't reset, so once they're used, they're used.</p><p>After that, you'll need a subscription to keep going. You'll see the options and prices in the app before you buy anything.</p><p>Your subscription is handled by Apple or Google, and it renews automatically unless you cancel at least a day before it renews. You cancel in your Apple or Google account settings. Heads up: deleting the app doesn't cancel your subscription.</p><p>Refunds go through Apple or Google, under their rules.</p><p>If prices ever go up, you'll be told ahead of time and can cancel before the new price applies to you.</p></td></tr></tbody></table><h2>6. App Store Terms</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Third-Party App Store Provisions</strong></p><p>If you obtain the App through an App Store, you acknowledge and agree that:</p><p>(a) These Terms are between you and Larian only, not the App Store provider. Larian, not the App Store provider, is solely responsible for the App and its content.</p><p>(b) Your license to use the App is limited to a non-transferable license to use it on devices you own or control, as permitted by the App Store's usage rules.</p><p>(c) The App Store provider has no obligation to provide maintenance or support for the App.</p><p>(d) In the event of any failure of the App to conform to an applicable warranty, you may notify the App Store provider, which may refund the purchase price (if any). To the maximum extent permitted by law, the App Store provider has no other warranty obligation with respect to the App.</p><p>(e) Larian, not the App Store provider, is responsible for addressing any claims relating to the App, including product liability claims, claims that the App fails to conform to legal or regulatory requirements, consumer protection claims, and claims that the App infringes a third party's intellectual property rights.</p><p>(f) You represent that you are not located in a country subject to a U.S. government embargo and are not on any U.S. government list of prohibited or restricted parties.</p><p>(g) You must comply with applicable third-party terms when using the App.</p><p>(h) The App Store provider and its subsidiaries are third-party beneficiaries of these Terms and may enforce them against you.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>Getting the App From Apple or Google</strong></p><p>If you download Okay*ish from the Apple App Store or Google Play, a few extra rules apply. These are standard, and Apple and Google require them.</p><p>Your deal is with us, not with Apple or Google. We're the ones responsible for the app, for supporting it, and for dealing with any problems or complaints about it.</p><p>Apple's and Google's own rules also apply when you use their stores.</p><p>If you need a refund for something you bought through their store, that goes through them.</p></td></tr></tbody></table><h2>7. Not Medical or Mental Health Care</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Disclaimer of Professional Services</strong></p><p>THE APP IS NOT A MEDICAL DEVICE, THERAPEUTIC TOOL, OR MENTAL HEALTH SERVICE. Nothing provided by the App constitutes medical advice, psychological counselling, psychiatric treatment, crisis intervention, or any other form of professional healthcare.</p><p>Use of the App does not create a therapist-patient, counsellor-client, or other professional relationship between you and Larian or any of its affiliates, employees, or service providers.</p><p>Content generated by the App is AI-produced and intended for general wellbeing and lighthearted perspective. It is not a substitute for professional medical or mental health advice, diagnosis, or treatment. Always seek the advice of a qualified healthcare provider with any questions about a medical or mental health condition.</p><p>The App's crisis detection is automated and may not identify every situation in which you need help. IF YOU ARE EXPERIENCING A MENTAL HEALTH CRISIS, THOUGHTS OF SUICIDE OR SELF-HARM, OR A MEDICAL EMERGENCY, CALL 911, CALL OR TEXT 988 (THE SUICIDE CRISIS HELPLINE IN CANADA AND THE SUICIDE AND CRISIS LIFELINE IN THE UNITED STATES), CONTACT YOUR LOCAL EMERGENCY SERVICES IF YOU ARE ELSEWHERE, OR GO TO THE NEAREST EMERGENCY ROOM. DO NOT RELY ON THE APP FOR CRISIS SUPPORT.</p><p>If you have an existing mental health condition, consider consulting your healthcare provider before using the App.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>This Is Not Therapy</strong></p><p>This one matters, so we want to be really clear: Okay*ish isn't a therapist, counsellor, doctor, or any kind of healthcare provider. It's a tool for finding the funny side of a hard moment.</p><p>Your kit is written by AI, not a licensed professional. It's meant to give you a little space from the feeling, not clinical guidance, and it's not a replacement for real mental health support.</p><p>If you're in crisis or thinking about hurting yourself, please reach out to a real person right away: call 911, call or text 988 in Canada or the US, or go to your nearest emergency room. The app tries to notice when someone needs that kind of help, but it can miss things, so please don't count on it in those moments.</p><p>If you have a mental health condition, it's a good idea to check with your healthcare provider before using the app.</p></td></tr></tbody></table><h2>8. AI-Generated Content</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Nature and Limitations of AI Output</strong></p><p>All reframes, one-liners, song suggestions, and other content generated by the App ("AI Content") are produced by artificial intelligence systems operated by our third-party provider. You acknowledge and agree that:</p><p>• AI Content is generated automatically and may be inaccurate, inappropriate, unhelpful, or not to your taste. We do not guarantee the quality, suitability, or effectiveness of any AI Content.</p><p>• AI Content is not reviewed by a person before delivery. We use automated safety checks designed to reduce harmful or inappropriate output, but we do not warrant that they will be effective in every case.</p><p>• Song suggestions are provided as text only. We do not provide, license, or link to the music, and do not guarantee a suggested song's availability, content, or suitability.</p><p>• AI Content is not factual information, professional advice, or instruction of any kind. You are solely responsible for how you interpret, use, or act on it.</p><p><strong>Feedback:</strong> If any piece of AI Content seems hurtful, inappropriate, or wrong, you may tell us using the Share feedback option in the App. Feedback is handled as described in our Privacy Policy.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>About Your AI-Written Kit</strong></p><p>Your kit is written by AI. Most of the time it lands. Sometimes it won't, and occasionally it might get something wrong.</p><p>No person reads your kit before you do. We've built in checks to catch anything mean or inappropriate, but no system is perfect.</p><p>Song suggestions are just a title and an artist. We don't play the song or link to it, and we can't promise how every song suits you.</p><p>Your kit is meant to make you smile or see things differently. It isn't fact, advice, or instructions. What you do with it is up to you.</p><p>If a piece ever feels hurtful or wrong, tap Share feedback at the bottom of the main screen and tell us. Our Privacy Policy explains exactly what gets sent.</p></td></tr></tbody></table><h2>9. User Conduct</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Acceptable Use Policy</strong></p><p>You agree to use the App only for its intended purpose and in compliance with all applicable laws. You agree not to:</p><p>• Submit or attempt to generate content that is unlawful, hateful, sexually explicit, threatening, harassing, or defamatory, or that targets any person;</p><p>• Use the App or AI Content to harass, intimidate, or harm any person;</p><p>• Reverse-engineer, decompile, or attempt to derive the source code, prompts, or underlying systems of the App;</p><p>• Use bots, scripts, or other automated means to access the App;</p><p>• Circumvent any content filter, safety measure, usage limit, or access control;</p><p>• Interfere with, overburden, or impair the App or its infrastructure; or</p><p>• Sell, sublicense, or commercially exploit AI Content without our prior written consent.</p><p>We recommend that you not include unnecessary identifying details about yourself or others, such as full names, addresses, or contact information, in what you type.</p><p>We may suspend or terminate access if we reasonably believe you have violated these Terms.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>Playing Fair</strong></p><p>Use Okay*ish the way it's meant to be used: tell it what happened, get your kit, get on with your day.</p><p>Please don't try to break it, hack it, flood it with bots, or get around its safety checks or free-use limit. And don't use it to create hateful or explicit content, or to go after anyone.</p><p>A tip: the app doesn't need real names or addresses to help you. "My coworker" works just as well as a full name.</p><p>Your kits are for your own use. Please don't sell them or use them commercially without asking us first.</p><p>If someone breaks these rules, we may need to suspend or close their access. We'd rather not, but we will if we have to.</p></td></tr></tbody></table><h2>10. Intellectual Property</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Ownership and Rights</strong></p><p><strong>App Ownership:</strong> The App, including its design, code, prompts, algorithms, artwork, mascot, branding, and all associated intellectual property, is owned by Larian and protected by applicable intellectual property laws. Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to use the App for personal, non-commercial purposes.</p><p><strong>AI Content:</strong> AI Content is provided for your personal, non-commercial use. Given the nature of AI-generated content, we make no representations about its copyrightability. You may share AI Content personally, for example with friends.</p><p><strong>Your Input:</strong> You retain all rights to what you type into the App. As described in our Privacy Policy, we do not store it or claim any rights to it.</p><p><strong>Feedback:</strong> If you provide feedback or suggestions, you grant us a non-exclusive, royalty-free, perpetual, irrevocable license to use them for any purpose, including improving the App.</p><p><strong>Trademarks:</strong> "Okay*ish," the Okay*ish logo, the llama mascot, and related marks are trademarks of Larian. You may not use them without our prior written permission.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>Who Owns What</strong></p><p>The app itself, including the design, the code, and the llama, belongs to us. You're welcome to use it for your own personal use.</p><p>Your kits are for you. Copyright law for AI-written content is still being worked out, and we're not going to pretend otherwise. Screenshot them, share them with friends. Just don't package them up and sell them.</p><p>What you type is yours. Always. We don't keep it, so there's nothing for us to claim.</p><p>If you send us an idea or feedback, we might use it to make the app better. By sending it, you're saying that's okay.</p></td></tr></tbody></table><h2>11. Accounts and Security</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Account Responsibilities</strong></p><p>Account creation is optional. If you create an account, you are responsible for maintaining the security of your sign-in method and for all activity under your account, and you agree to provide accurate information.</p><p>You must notify us promptly of any unauthorized use of your account. We may suspend or terminate accounts we reasonably believe have been compromised or used in violation of these Terms.</p><p>You may delete your account at any time from within the App's settings.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>Your Account</strong></p><p>You don't need an account, but if you make one, keep your login safe. You're responsible for what happens on it.</p><p>If you think someone else has gotten into your account, let us know right away and we'll help sort it out.</p><p>You can delete your account anytime, right in the app's settings.</p></td></tr></tbody></table><h2>12. Privacy and Data Processing</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Processing and Storage of Information</strong></p><p>Our Privacy Policy, which forms part of these Terms, describes what information we collect and how we use, disclose, and protect it.</p><p>By using the App, you acknowledge that information may be processed in Canada and in the United States, including by our AI service provider and subscription provider, as described in the Privacy Policy. Data protection laws in those countries may differ from those where you live. We take commercially reasonable measures to comply with applicable data protection laws.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>Where Your Data Lives</strong></p><p>Our Privacy Policy has the full details. The short version: what you type is used to write your kit, then it's gone from Okay*ish. What we keep is a set of numbers about what makes you laugh, stored on your phone with a backup in Canada.</p><p>Some of the companies that help run the app, like the AI that writes your kit, are in the United States, so some information passes through there.</p></td></tr></tbody></table><h2>13. Third-Party Links and Services</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>External Resources</strong></p><p>The App may display or link to third-party resources, including crisis lines and mental health resources. These are provided for your convenience. We do not control, endorse, or assume responsibility for their content, privacy practices, or availability, and your use of them is subject to their own terms.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>Links to Other Places</strong></p><p>The app may point you to outside resources, like crisis lines. We include them because they're helpful, but we don't run them.</p><p>Once you leave the app, their rules apply, not ours.</p></td></tr></tbody></table><h2>14. Service Availability</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Availability</strong></p><p>We aim to provide reliable access to the App but do not guarantee it will be available at all times. The App may be unavailable due to maintenance, updates, outages of our service providers, or circumstances beyond our control. We will make reasonable efforts to give advance notice of planned maintenance and to restore service promptly.</p><p>To the maximum extent permitted by law, we are not liable for any loss arising from the App being temporarily unavailable.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>When the App Might Be Down</strong></p><p>We do our best to keep Okay*ish running, but no app is up 100% of the time. Updates, maintenance, or problems with the companies we rely on can cause the odd outage.</p><p>If we're planning downtime, we'll try to give you a heads-up. If something breaks, we'll get it back up as fast as we can.</p></td></tr></tbody></table><h2>15. Limitation of Liability</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Liability Limitations</strong></p><p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LARIAN AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, AND AFFILIATES SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING LOSS OF PROFITS, DATA, USE, OR GOODWILL, ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE THE APP.</p><p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, OUR TOTAL LIABILITY FOR ALL CLAIMS ARISING OUT OF OR RELATED TO THESE TERMS OR THE APP SHALL NOT EXCEED THE GREATER OF THE AMOUNT YOU PAID FOR THE APP IN THE TWELVE (12) MONTHS PRECEDING THE CLAIM OR FIFTY CANADIAN DOLLARS (CAD $50).</p><p>THESE LIMITATIONS APPLY REGARDLESS OF THE THEORY OF LIABILITY AND EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p><p>Nothing in these Terms limits or excludes any liability or any right you have that cannot be limited or excluded under applicable law, including consumer protection law in your province, state, or country.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>Our Liability</strong></p><p>We work hard to make Okay*ish helpful and reliable. But things can go wrong with any app, and we need to be upfront about what we can and can't be responsible for.</p><p>We're not on the hook for indirect knock-on effects, like lost profits. The most we'd owe is what you've paid us in the past 12 months, or $50 (Canadian), whichever is more.</p><p>This is standard for apps and helps keep a small company like ours going. It doesn't mean we don't care.</p><p>If the law where you live gives you rights that can't be limited this way, you keep those rights.</p></td></tr></tbody></table><h2>16. Disclaimer of Warranties</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Warranty Disclaimer</strong></p><p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.</p><p>WE DO NOT WARRANT THAT THE APP WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE, THAT AI CONTENT WILL BE ACCURATE, APPROPRIATE, OR HELPFUL, THAT CRISIS DETECTION WILL IDENTIFY EVERY SITUATION REQUIRING HELP, OR THAT PERSONALIZATION WILL ACCURATELY REFLECT YOUR PREFERENCES.</p><p>Some jurisdictions do not allow the exclusion of certain warranties or conditions, so some of these exclusions may not apply to you.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>No Guarantees</strong></p><p>We can't promise Okay*ish will be perfect. There might be bugs, downtime, or kits that completely miss.</p><p>We also can't promise the app will figure out what makes you laugh right away. It gets better over time, but it's not magic. It's math.</p><p>And as we said above, the app can miss signs that someone needs real help. That's why it should never be your only support.</p></td></tr></tbody></table><h2>17. Indemnification</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Your Indemnification Obligations</strong></p><p>To the extent permitted by applicable law, you agree to indemnify and hold harmless Larian and its officers, directors, employees, agents, and affiliates from claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of your violation of these Terms, your violation of any law, or your use of the App or AI Content to harm any third party.</p><p>This obligation survives termination of these Terms.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>Covering Our Bases</strong></p><p>If you break these rules or the law, or use the app to hurt someone, and we get pulled into a legal problem because of it, you agree to cover the costs.</p><p>This is a standard clause in nearly every app's terms.</p></td></tr></tbody></table><h2>18. Governing Law and Disputes</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Governing Law and Dispute Resolution</strong></p><p><strong>Governing Law:</strong> These Terms are governed by the laws of the Province of Ontario and the federal laws of Canada applicable in Ontario, without regard to conflict of law principles.</p><p><strong>Informal Resolution:</strong> Before starting any formal proceeding, you agree to contact us and try in good faith to resolve the dispute informally for at least thirty (30) days.</p><p><strong>Courts:</strong> Subject to the informal resolution step, any dispute arising out of or relating to these Terms or the App shall be resolved by the courts of Ontario, and you and we submit to their jurisdiction. Either party may bring a claim in small claims court where eligible.</p><p><strong>Consumer Rights:</strong> Nothing in these Terms limits any right you may have under the consumer protection laws of your place of residence, including any right to bring a claim in the courts where you live or to participate in a class proceeding.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>If We Disagree</strong></p><p>If there's ever a problem between us, the first step is to talk. Contact us, and we'll both try to sort it out for at least 30 days before anything formal happens.</p><p>If that doesn't work, Ontario law applies and disputes go to the Ontario courts (or small claims court, if your claim qualifies).</p><p>Consumer protection laws where you live still apply. These terms can't take those rights away.</p></td></tr></tbody></table><h2>19. Termination</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Termination Rights</strong></p><p>You may stop using the App at any time by deleting it and, if applicable, deleting your account in the App's settings. Deleting the App or your account does not cancel an App Store subscription, which must be cancelled through your App Store account.</p><p>We may suspend or terminate your access to the App if you violate these Terms, if your conduct is harmful to others or to us, or if we discontinue the App. Where we discontinue the App, we will provide reasonable notice where feasible.</p><p>On termination, your right to use the App ends. Sections 10, 15, 16, 17, and 18, and any other provisions that by their nature should survive, continue to apply. Data deletion following account deletion is handled as described in our Privacy Policy.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>Leaving Okay*ish</strong></p><p>You can stop anytime. Delete the app, and delete your account in settings if you made one. No hard feelings.</p><p>Remember: if you subscribed, cancel in your Apple or Google settings too. Deleting the app doesn't do that for you.</p><p>We can also end access if someone's misusing the app, or if we ever shut it down. If we shut down, we'll try to give you notice.</p><p>When you delete your account, your information is deleted within 30 days.</p></td></tr></tbody></table><h2>20. General Provisions</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Miscellaneous</strong></p><p><strong>Entire Agreement:</strong> These Terms and our Privacy Policy are the entire agreement between you and Larian regarding the App and supersede any prior agreements.</p><p><strong>Severability:</strong> If any provision is found unenforceable, it will be modified to the minimum extent necessary, and the remaining provisions will continue in full force.</p><p><strong>Waiver:</strong> Our failure to enforce a provision is not a waiver of it.</p><p><strong>Assignment:</strong> You may not assign your rights under these Terms without our consent. We may assign our rights and obligations, including in connection with a merger, acquisition, or sale of assets.</p><p><strong>Force Majeure:</strong> We are not liable for any failure or delay caused by circumstances beyond our reasonable control, including natural disasters, government action, pandemics, internet or power failures, or failures of third-party service providers.</p><p><strong>Electronic Communications:</strong> You consent to receive communications from us electronically, including in-app notices and email, and agree these satisfy any requirement that communications be in writing.</p><p><strong>Language:</strong> These Terms are written in English. If a translated version is provided, the English version governs to the extent permitted by law.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>The Fine Print</strong></p><p>These terms plus our Privacy Policy are the whole deal between us.</p><p>If a court decides one part doesn't hold up, the rest still applies.</p><p>If we don't enforce a rule once, that doesn't mean we've given up on it.</p><p>You can't transfer your account to someone else. If our company ever changes hands, these terms go with it.</p><p>If something truly beyond our control happens, like a natural disaster or a major internet outage, we're not responsible for the disruption.</p><p>We'll send you notices in the app or by email rather than by mail.</p></td></tr></tbody></table><h2>21. Contact Us</h2><table class="legal-table"><tbody><tr><td class="legal-col"><p class="col-label">Legal version</p><p><strong>Contact Information</strong></p><p>If you have questions about these Terms, please contact:</p><p>Larian Group Inc. (operating Okay*ish)</p><p>Email: legal@okayish.app</p><p>We aim to respond to all inquiries within thirty (30) days.</p></td><td class="plain-col"><p class="col-label">Plain language</p><p><strong>Get in Touch</strong></p><p>Questions about these terms? Email us at:</p><p>legal@okayish.app</p><p>We'll get back to you within 30 days, and usually much sooner.</p></td></tr></tbody></table>
+
+    </div>
+  </section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-row">
+        <span class="llama-bubble"><img src="/images/llama-icon.png" alt="Okay*ish" /></span>
+        <span class="footer-brand">Okay<span class="ast">*</span><span class="ish">ish</span></span>
+      </div>
+      <p class="footer-tagline">Don't let a bad moment become a bad day.</p>
+      <p class="footer-age">For adults 18+, because the llama occasionally has a mouth on it.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="/therapists/">For Therapists</a>
+        <a href="/companies/">For Companies</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/support/">Contact</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&#169; 2026 Larian Group Inc. All rights reserved.</span>
+    <span>Made with the assumption that everyone is having a harder day than they look like they are.</span>
+  </div>
+</footer>
+
+<script>
+  function copyAppLink() {
+    var link = 'https://apps.apple.com/app/id6831597818';
+    var btn = document.getElementById('refLinkBtn');
+    function done() {
+      btn.textContent = 'Link copied!';
+      setTimeout(function () { btn.textContent = 'Get the Referral Link'; }, 2500);
+    }
+    function fallback() {
+      var t = document.createElement('textarea');
+      t.value = link; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (e) { window.open(link, '_blank'); }
+      document.body.removeChild(t);
+    }
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(done, fallback);
+      } else { fallback(); }
+    } catch (e) { fallback(); }
+  }
+  function copyEmail() {
+    var email = 'support@okayish.app';
+    var btn = document.getElementById('copyEmailBtn');
+    function done() {
+      btn.textContent = 'Copied!';
+      setTimeout(function () { btn.textContent = 'Copy email'; }, 2000);
+    }
+    function fallback() {
+      var t = document.createElement('textarea');
+      t.value = email; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(t);
+    }
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(done, fallback);
+      } else { fallback(); }
+    } catch (e) { fallback(); }
+  }
+</script>
+
 </body>
 </html>

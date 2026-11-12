@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Okay*ish for Therapists: A Between-Sessions Resource for Clients</title>
+  <meta name="description" content="Okay*ish gives clients something constructive to reach for when a hard moment hits between sessions. Private, in the moment, and grounded in cognitive reappraisal research." />
+  <link rel="canonical" href="https://okayish.app/therapists/" />
+  <link rel="icon" type="image/png" href="/images/llama-icon.png" />
+  <link rel="apple-touch-icon" href="/images/llama-icon.png" />
+  <meta name="apple-itunes-app" content="app-id=6831597818" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Okay*ish" />
+  <meta property="og:title" content="Okay*ish for Therapists: A Between-Sessions Resource for Clients" />
+  <meta property="og:description" content="Okay*ish gives clients something constructive to reach for when a hard moment hits between sessions. Private, in the moment, and grounded in cognitive reappraisal research." />
+  <meta property="og:url" content="https://okayish.app/therapists/" />
+  <meta property="og:image" content="https://okayish.app/images/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="The Okay*ish llama, meditating, next to the words: An app for the moments that get to you." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <style>
+    :root {
+      --sky: #5b8bff;
+      --sky-mid: #3f73e3;
+      --sky-pale: #dcf9ff;
+      --sky-faint: #ecfcff;
+      --navy: #1a1d2b;
+      --navy-mid: #5a6178;
+      --white: #ffffff;
+      --line: #dde2ef;
+      --ink: #1a1d2b;
+      --ink-dim: #5a6178;
+      --ink-faint: #8990a6;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      z-index: 100;
+      padding: 0 2rem;
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .wordmark {
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: 0.2px;
+      color: var(--ink);
+    }
+
+    .wordmark .ast {
+      color: var(--sky-mid);
+      font-weight: 800;
+      margin: 0 1px;
+    }
+
+    .wordmark .ish {
+      font-style: italic;
+      font-weight: 600;
+      color: var(--ink-dim);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--ink-dim);
+      text-decoration: none;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--navy);
+    }
+
+    .nav-cta {
+      background: var(--sky-mid);
+      color: var(--white) !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 100px;
+      font-weight: 600;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--sky) !important;
+      color: var(--white) !important;
+    }
+
+    /* PAGES */
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 5rem 2rem;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .container-narrow {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(180deg, #5fe5fe 0%, #cff7ff 100%);
+      padding: 5rem 2rem 5rem;
+      text-align: center;
+    }
+
+    .hero-llama {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-llama img {
+      height: 160px;
+      width: auto;
+      display: block;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 1.2rem;
+      opacity: 0.7;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      color: var(--navy);
+      margin-bottom: 1.2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero h1 .brand {
+      color: var(--navy);
+    }
+
+    .rotator-stage {
+      font-size: clamp(1.15rem, 2.6vw, 1.5rem);
+      height: 1.9em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    @media (max-width: 600px) {
+      .rotator-stage { height: 3em; }
+      .rotator-line { white-space: normal !important; }
+    }
+    .rotator-line {
+      font-size: 1em;
+      line-height: 1.4;
+      text-align: center;
+      font-weight: 600;
+      color: var(--navy-mid);
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+      white-space: nowrap;
+    }
+
+    .rotator-line.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rotator-line {
+        transition: none;
+      }
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--navy-mid);
+      margin-bottom: 2.5rem;
+      line-height: 1.65;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: #3f73e3;
+      color: var(--white);
+      padding: 0.85rem 2rem;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      border: none;
+      box-shadow: 0 4px 16px rgba(63, 115, 227, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: #5b8bff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(63, 115, 227, 0.3);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: rgba(255,255,255,0.6);
+      color: var(--navy);
+      padding: 0.85rem 2rem;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: 2px solid rgba(26, 29, 43, 0.3);
+      transition: all 0.2s;
+      backdrop-filter: blur(4px);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.85);
+      border-color: var(--navy);
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--sky-faint);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 1.5rem 2rem;
+    }
+
+    .trust-items {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--navy-mid);
+      font-weight: 500;
+    }
+
+    .trust-icon {
+      width: 18px;
+      height: 18px;
+      background: var(--sky-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-size: 0.7rem;
+    }
+
+    /* SECTIONS */
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sky-mid);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+      color: var(--navy);
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--ink-dim);
+      max-width: 560px;
+      margin-bottom: 3rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .step {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      border: none;
+      box-shadow: 0 4px 24px rgba(26, 29, 43, 0.08);
+    }
+
+    .step-num {
+      width: 36px;
+      height: 36px;
+      background: var(--sky);
+      color: var(--navy);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .step h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--navy);
+    }
+
+    .step p {
+      font-size: 0.95rem;
+      color: var(--ink-dim);
+      line-height: 1.6;
+    }
+
+    /* FEATURES */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border: none;
+      border-radius: 20px;
+      padding: 1.75rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(26, 29, 43, 0.07);
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(26, 29, 43, 0.12);
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--sky-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+
+    .feature-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--navy);
+    }
+
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+      line-height: 1.6;
+    }
+
+    /* PRIVACY */
+    .privacy-section {
+      background: #1f3a5f;
+      color: var(--white);
+      text-align: center;
+      max-width: 980px;
+      margin: 0 auto;
+      border-radius: 28px;
+      padding: 4.5rem 2.5rem;
+      box-shadow: 0 20px 50px rgba(13, 30, 54, 0.22);
+    }
+
+    .privacy-section .section-label {
+      color: var(--sky);
+      opacity: 0.9;
+    }
+
+    .privacy-section .section-title {
+      color: var(--white);
+    }
+
+    .privacy-section p {
+      color: rgba(255,255,255,0.8);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .privacy-points {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 240px));
+      justify-content: center;
+      gap: 2.25rem 3rem;
+      margin-top: 2.5rem;
+    }
+    @media (max-width: 480px) {
+      .privacy-points { grid-template-columns: minmax(0, 260px); }
+    }
+
+    .privacy-point {
+      text-align: center;
+    }
+
+    .privacy-point .icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--sky);
+    }
+
+    .privacy-point h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--sky);
+    }
+
+    .privacy-point p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+      margin: 0;
+    }
+
+    .privacy-section .btn-secondary {
+      color: var(--white);
+      border-color: rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .privacy-section .btn-secondary:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* PRICING */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .pricing-card {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background: var(--white);
+      border: 2px solid var(--line);
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(26, 29, 43, 0.07);
+    }
+
+    .pricing-card.pricing-featured {
+      border-color: var(--sky-mid);
+      box-shadow: 0 8px 32px rgba(63, 115, 227, 0.2);
+    }
+
+    .pricing-badge {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--sky-mid);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.9rem;
+      border-radius: 100px;
+      box-shadow: 0 4px 12px rgba(63, 115, 227, 0.3);
+    }
+
+    .pricing-tier {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sky-mid);
+      margin-bottom: 0.75rem;
+    }
+
+    .pricing-amount {
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.2rem;
+    }
+
+    .pricing-num {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+    }
+
+    .pricing-period {
+      font-size: 1rem;
+      color: var(--ink-dim);
+    }
+
+    .pricing-alt {
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+      margin-bottom: 1rem;
+    }
+
+    .pricing-save {
+      background: var(--sky-pale);
+      color: var(--navy);
+      padding: 0.1rem 0.5rem;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .pricing-desc {
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .pricing-features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      padding: 0.3rem 0;
+      color: var(--ink);
+    }
+
+    .pricing-features li .check {
+      color: var(--sky-mid);
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(180deg, var(--sky-faint) 0%, var(--sky-pale) 100%);
+      text-align: center;
+    }
+
+    .cta-section .section-title {
+      color: var(--navy);
+    }
+
+    /* THERAPIST PAGE */
+    .therapist-hero {
+      background: linear-gradient(180deg, var(--sky-pale) 0%, var(--sky-faint) 100%);
+      padding: 6rem 2rem 5rem;
+      text-align: center;
+    }
+
+    .therapist-hero h1,
+    .therapist-hero p {
+      color: var(--navy);
+    }
+
+    .pill {
+      display: inline-block;
+      background: var(--navy);
+      color: var(--sky);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.9rem;
+      border-radius: 100px;
+      margin-bottom: 1.2rem;
+    }
+
+    .research-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .research-card {
+      background: var(--white);
+      border: none;
+      border-radius: 20px;
+      padding: 1.75rem;
+      text-align: left;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(26, 29, 43, 0.07);
+    }
+
+    .research-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 32px rgba(26, 29, 43, 0.12);
+    }
+
+    .research-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--sky-mid);
+      margin-bottom: 0.75rem;
+    }
+
+    .research-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      line-height: 1.4;
+    }
+
+    .research-card p {
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .research-card a {
+      font-size: 0.875rem;
+      color: var(--navy-mid);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .research-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* HOW IT FITS */
+    .fit-list {
+      list-style: none;
+      margin-top: 2rem;
+    }
+
+    .fit-list li {
+      display: flex;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .fit-list li:last-child {
+      border-bottom: none;
+    }
+
+    .fit-check {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      background: var(--sky);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy);
+      font-size: 0.75rem;
+      margin-top: 2px;
+    }
+
+    .fit-list h4 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .fit-list p {
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+    }
+
+    /* THERAPIST CTA */
+    .therapist-cta {
+      background: var(--navy);
+      padding: 5rem 2rem;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .therapist-cta h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .therapist-cta p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.85);
+      max-width: 520px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .btn-white {
+      display: inline-block;
+      background: var(--white);
+      color: var(--navy);
+      padding: 0.85rem 2rem;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      border: none;
+    }
+
+    .btn-white:hover {
+      opacity: 0.9;
+    }
+
+    /* COMPANY PAGE */
+    .plans-hero {
+      background: linear-gradient(135deg, #1a1d2b 0%, #3f73e3 100%);
+      padding: 6rem 2rem 5rem;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .plans-hero .pill {
+      background: rgba(255,255,255,0.15);
+      color: var(--white);
+    }
+
+    .plans-hero h1 {
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .plans-hero p {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.8);
+      max-width: 540px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      flex-wrap: wrap;
+      margin-top: 3.5rem;
+      padding-top: 3.5rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.7);
+      margin-top: 0.4rem;
+    }
+
+    /* VALUE PROPS */
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .value-card {
+      background: var(--white);
+      border: none;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 4px 24px rgba(26, 29, 43, 0.07);
+    }
+
+    .value-card .icon {
+      width: 44px;
+      height: 44px;
+      background: var(--sky-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      color: var(--navy);
+    }
+
+    .value-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .value-card p {
+      font-size: 0.9rem;
+      color: var(--ink-dim);
+      line-height: 1.6;
+    }
+
+    /* CONTACT CTA */
+    .contact-cta {
+      background: var(--sky-faint);
+      text-align: center;
+    }
+
+    .contact-form {
+      background: var(--white);
+      border: none;
+      border-radius: 24px;
+      box-shadow: 0 8px 40px rgba(26, 29, 43, 0.1);
+      padding: 2.5rem;
+      max-width: 540px;
+      margin: 2.5rem auto 0;
+      text-align: left;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+      color: var(--ink);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--ink);
+      background: var(--white);
+      font-family: inherit;
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--sky-mid);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 0.85rem;
+      background: #3f73e3;
+      color: var(--white);
+      border: none;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .form-submit:hover {
+      background: #5b8bff;
+    }
+
+    /* CONFIDANTE SECTION */
+    .confidante-scenarios {
+      max-width: 580px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .confidante-scenarios p {
+      font-size: 1.15rem;
+      color: var(--ink-dim);
+      font-style: italic;
+      line-height: 1.75;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .confidante-scenarios p:last-child {
+      border-bottom: none;
+    }
+
+    .confidante-llama {
+      margin: 0 auto 2rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .confidante-llama img {
+      height: 110px;
+      width: auto;
+    }
+
+    .confidante-payoff {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .confidante-sub {
+      font-size: 1rem;
+      color: var(--ink-dim);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1f3a5f;
+      color: rgba(255,255,255,0.6);
+      padding: 3rem 2rem 2rem;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-brand-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-brand-row .llama-bubble {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .footer-brand-row .llama-bubble img {
+      width: 30px;
+      height: 30px;
+      object-fit: cover;
+      display: block;
+      opacity: 0.85;
+    }
+
+    .footer-brand {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .footer-brand .ast {
+      color: var(--sky);
+      font-weight: 800;
+    }
+
+    .footer-brand .ish {
+      font-style: italic;
+      font-weight: 600;
+      color: rgba(255,255,255,0.6);
+    }
+
+    .footer-tagline {
+      font-size: 0.875rem;
+      max-width: 220px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-col h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: rgba(255,255,255,0.6);
+      text-decoration: none;
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .footer-col a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 1.5rem auto 0;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-links {
+        gap: 2rem;
+      }
+
+      .stats-row {
+        gap: 2rem;
+      }
+    }
+    .coming-soon { cursor: default !important; }
+    .coming-soon:hover { transform: none !important; }
+    .pricing-currency { font-size: 0.78rem; color: var(--ink-dim); margin: -0.25rem 0 0.75rem; }
+    .form-note { font-size: 0.82rem; color: var(--ink-dim); margin-top: 0.85rem; line-height: 1.5; }
+    .form-note a { color: var(--sky-mid); }
+    .privacy-honest { max-width: 620px; margin: 1.25rem auto 0; font-size: 0.92rem; line-height: 1.6; opacity: 0.85; }
+    .footer-age { font-size: 0.82rem; opacity: 0.7; margin-top: 0.6rem; max-width: 280px; line-height: 1.5; }
+    .legal-page { padding-top: 7rem; }
+    .legal-meta { color: var(--ink-dim); font-size: 0.9rem; line-height: 1.6; margin-top: 0.5rem; }
+    .legal-intro { color: var(--ink-dim); font-size: 0.95rem; font-style: italic; margin: 1rem 0 2rem; max-width: 640px; }
+    .legal-page h2 { font-size: 1.25rem; margin: 2.5rem 0 1rem; }
+    .legal-table { width: 100%; border-collapse: separate; border-spacing: 1rem 0; margin: 0 -1rem; table-layout: fixed; }
+    .legal-table td { vertical-align: top; padding: 1.25rem 1.4rem; border-radius: 14px; font-size: 0.92rem; line-height: 1.65; }
+    .legal-table td p { margin-bottom: 0.75rem; }
+    .legal-table td p:last-child { margin-bottom: 0; }
+    .legal-col { background: var(--white); border: 1px solid var(--line); }
+    .plain-col { background: var(--sky-pale); }
+    .col-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--sky-mid); }
+    @media (max-width: 760px) {
+      .legal-table, .legal-table tbody, .legal-table tr, .legal-table td { display: block; width: 100%; }
+      .legal-table { margin: 0; }
+      .legal-table td + td { margin-top: 0.75rem; }
+    }
+    .pricing-card .plan-cta { margin-top: auto; }
+    .contact-page { padding-bottom: 5rem; }
+    .contact-lede { color: var(--ink-dim); font-size: 1.05rem; line-height: 1.65; max-width: 520px; margin: 1rem auto 2rem; }
+    .contact-card { background: var(--white); border: 1px solid var(--line); border-radius: 20px; padding: 2rem 1.5rem; max-width: 440px; margin: 0 auto; box-shadow: 0 4px 24px rgba(26, 29, 43, 0.07); }
+    .contact-email { font-size: clamp(1.2rem, 4.5vw, 1.6rem); font-weight: 700; margin-bottom: 1.25rem; word-break: break-all; user-select: all; }
+    .contact-small { color: var(--ink-dim); font-size: 0.9rem; margin-top: 1.75rem; }
+    .hero-sub.hero-sub-1 { margin-bottom: 0.5rem; }
+    .hero-sub.hero-sub-2 { font-weight: 600; }
+    a.btn-primary, a.btn-white, a.nav-cta { display: inline-block; text-decoration: none; }
+    a.plan-cta { display: block; box-sizing: border-box; text-decoration: none; }
+      a.nav-logo { text-decoration: none; color: inherit; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="Okay*ish home">
+      <span class="wordmark">Okay<span class="ast">*</span><span class="ish">ish</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="https://apps.apple.com/app/id6831597818" target="_blank" rel="noopener" class="nav-cta">Get the App</a>
+    </div>
+  </div>
+</nav>
+
+<div id="page-therapists" class="page active">
+
+  <div class="therapist-hero">
+    <div class="container-narrow">
+      <span class="pill">For Therapists and Psychologists</span>
+      <h1 style="font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 800; margin-bottom: 1.2rem; line-height: 1.15;">The gap between sessions matters.</h1>
+      <p style="font-size: 1.1rem; color: var(--ink-dim); max-width: 540px; margin: 0 auto 2.5rem;">Okay*ish gives your clients something constructive to reach for when a difficult moment arrives but their next appointment is days away.</p>
+      <a href="https://apps.apple.com/app/id6831597818" target="_blank" rel="noopener" class="btn-primary">Refer a Patient</a>
+    </div>
+  </div>
+
+  <!-- The Science -->
+  <section>
+    <div class="container">
+      <p class="section-label">The Science</p>
+      <h2 class="section-title">Grounded in cognitive reappraisal research.</h2>
+      <p class="section-subtitle">Okay*ish is built on a well-established body of research into how changing the way we interpret a situation changes how we feel about it.</p>
+      <div class="research-cards">
+
+        <div class="research-card">
+          <p class="research-tag">Affect Labeling</p>
+          <h3>Putting feelings into words reduces emotional intensity</h3>
+          <p>Writing down what happened isn't just venting. Research found that labeling emotions with words measurably reduces activity in the amygdala, creating an immediate calming effect on emotional intensity, even without any deliberate effort to regulate.</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/17576282/" target="_blank">Read the study &#8594;</a>
+        </div>
+
+        <div class="research-card">
+          <p class="research-tag">Cognitive Reappraisal</p>
+          <h3>Reappraisal is more effective for regulating emotions than moods</h3>
+          <p>This PMC study found that cognitive reappraisal specifically targets the appraisal stage, making it highly effective for in-the-moment emotional regulation, with longer-lasting effects than attention-based strategies.</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12579643/" target="_blank">Read the study &#8594;</a>
+        </div>
+
+        <div class="research-card">
+          <p class="research-tag">Humor and Coping</p>
+          <h3>Humor functions as a cognitive reappraisal strategy</h3>
+          <p>Research on humor as a coping mechanism shows it operates through the same cognitive pathway as reappraisal, creating psychological distance from a stressor without requiring deliberate effort. Humor isn't avoidance; it's a well-studied route to a lighter frame.</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/11453726/" target="_blank">Read the study &#8594;</a>
+        </div>
+
+        <div class="research-card">
+          <p class="research-tag">Emotional Timing</p>
+          <h3>Brief engagement at the moment of distress prevents escalation</h3>
+          <p>Affect labeling works as implicit emotion regulation, meaning the brief act of putting a difficult moment into words can interrupt the escalation cycle before it compounds. The window for intervention is short, and early engagement makes a measurable difference.</p>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/29200505/" target="_blank">Read the study &#8594;</a>
+        </div>
+
+        <div class="research-card">
+          <p class="research-tag">Neuroimaging</p>
+          <h3>Cognitive reappraisal and emotion: a meta-analysis of neuroimaging studies</h3>
+          <p>Reappraisal recruits frontal and parietal control regions to modulate emotional responding in the amygdala, a well-replicated mechanism across 48 neuroimaging studies reviewed in this meta-analysis.</p>
+          <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4193464/" target="_blank">Read the study &#8594;</a>
+        </div>
+
+        <div class="research-card">
+          <p class="research-tag">AI-Assisted Reappraisal</p>
+          <h3>Large language models are capable of offering cognitive reappraisal, if guided</h3>
+          <p>Research from arXiv demonstrates that LLMs can deliver clinically grounded cognitive reappraisals when structured appropriately. This is the mechanism Okay*ish is built on, with the addition of personalized humor calibration, structured session design, and privacy-first architecture that general AI tools don't offer.</p>
+          <a href="https://arxiv.org/pdf/2404.01288" target="_blank">Read the paper &#8594;</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Fits -->
+  <section style="background: var(--sky-faint);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;">
+        <div>
+          <p class="section-label">How It Fits Your Practice</p>
+          <h2 class="section-title">A between-sessions resource, not a replacement.</h2>
+          <p style="color: var(--ink-dim); margin-bottom: 1.5rem; font-size: 1rem;">Okay*ish is designed to complement professional care, giving clients a structured way to work with difficult moments as they happen rather than waiting until they can articulate them in session.</p>
+          <a href="https://apps.apple.com/app/id6831597818" target="_blank" rel="noopener" class="btn-primary" style="margin-top: 0.5rem;">Refer a Patient</a>
+        </div>
+        <div>
+          <ul class="fit-list">
+            <li>
+              <div class="fit-check">&#10003;</div>
+              <div>
+                <h4>Between sessions</h4>
+                <p>Clients can use Okay*ish during the week when something comes up and they can't reach you.</p>
+              </div>
+            </li>
+            <li>
+              <div class="fit-check">&#10003;</div>
+              <div>
+                <h4>Reinforces reappraisal skills</h4>
+                <p>The reframe kits apply the same cognitive restructuring principles central to CBT, DBT, and psychodynamic approaches.</p>
+              </div>
+            </li>
+            <li>
+              <div class="fit-check">&#10003;</div>
+              <div>
+                <h4>No clinical overreach</h4>
+                <p>Okay*ish does not diagnose or provide treatment. If a moment looks serious, it shows crisis resources instead of jokes. It is not a replacement for your care.</p>
+              </div>
+            </li>
+            <li>
+              <div class="fit-check">&#10003;</div>
+              <div>
+                <h4>Private, for real</h4>
+                <p>Okay*ish never keeps what clients type. You receive no data. There is no clinical record created.</p>
+              </div>
+            </li>
+            <li>
+              <div class="fit-check">&#10003;</div>
+              <div>
+                <h4>Low barrier to entry</h4>
+                <p>No lengthy onboarding. Clients can be using it within minutes of your referral.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Therapist CTA -->
+  <div class="therapist-cta">
+    <div class="container-narrow">
+      <h2>Ready to refer a patient?</h2>
+      <p>Send them a link and they can get started in minutes. Nothing to configure on your end, no data comes back to you.</p>
+      <button class="btn-white" id="refLinkBtn" onclick="copyAppLink()">Get the Referral Link</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand-row">
+        <span class="llama-bubble"><img src="/images/llama-icon.png" alt="Okay*ish" /></span>
+        <span class="footer-brand">Okay<span class="ast">*</span><span class="ish">ish</span></span>
+      </div>
+      <p class="footer-tagline">Don't let a bad moment become a bad day.</p>
+      <p class="footer-age">For adults 18+, because the llama occasionally has a mouth on it.</p>
+    </div>
+    <div class="footer-links">
+      <div class="footer-col">
+        <h4>Solutions</h4>
+        <a href="/therapists/">For Therapists</a>
+        <a href="/companies/">For Companies</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/support/">Contact</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/terms/">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&#169; 2026 Larian Group Inc. All rights reserved.</span>
+    <span>Made with the assumption that everyone is having a harder day than they look like they are.</span>
+  </div>
+</footer>
+
+<script>
+  function copyAppLink() {
+    var link = 'https://apps.apple.com/app/id6831597818';
+    var btn = document.getElementById('refLinkBtn');
+    function done() {
+      btn.textContent = 'Link copied!';
+      setTimeout(function () { btn.textContent = 'Get the Referral Link'; }, 2500);
+    }
+    function fallback() {
+      var t = document.createElement('textarea');
+      t.value = link; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (e) { window.open(link, '_blank'); }
+      document.body.removeChild(t);
+    }
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(done, fallback);
+      } else { fallback(); }
+    } catch (e) { fallback(); }
+  }
+  function copyEmail() {
+    var email = 'support@okayish.app';
+    var btn = document.getElementById('copyEmailBtn');
+    function done() {
+      btn.textContent = 'Copied!';
+      setTimeout(function () { btn.textContent = 'Copy email'; }, 2000);
+    }
+    function fallback() {
+      var t = document.createElement('textarea');
+      t.value = email; document.body.appendChild(t); t.select();
+      try { document.execCommand('copy'); done(); } catch (e) {}
+      document.body.removeChild(t);
+    }
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(email).then(done, fallback);
+      } else { fallback(); }
+    } catch (e) { fallback(); }
+  }
+</script>
+
+</body>
+</html>
